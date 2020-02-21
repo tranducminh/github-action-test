@@ -6,11 +6,12 @@ on:
 jobs: 
   build:
     runs-on: ubuntu-latest
-    - uses: actions/checkout@v2 #pull code tu repo ve may ao
-    - name: Use Node.js    # cai node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - run: ls -la
-    - run: npm install
-    - run: npm run build
+    steps: 
+      - uses: actions/checkout@v2 #pull code tu repo ve may ao
+      - name: Use Node.js    # cai node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - run: ls -la
+      - run: npm install
+      - run: npm run build
