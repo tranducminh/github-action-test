@@ -20,5 +20,5 @@ jobs:
                   rsync' $user@$host:$target
               env:
                   user: root
-                  host: 139.162.40.162 ###
+                  host: 139.162.40.162 ##
                   target: test
