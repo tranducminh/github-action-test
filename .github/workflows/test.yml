@@ -16,8 +16,8 @@ jobs:
             - run: ls -la
             - name: Send file to server
               run:
-                  rsync -azhv -e 'ssh -i ~/.ssh/private_key -o StrictHostKeyChecking=no' build/*  --rsync-path='sudo
-                  rsync' $user@$host:$target
+                  rsync -azhv -e 'ssh -i ~/.ssh/private_key -o StrictHostKeyChecking=no' build/*  --rsync-path='sudo rm
+                  -rf $target/* && sudo rsync' $user@$host:$target
               env:
                   user: root
                   host: 139.162.40.162 ## aaa
